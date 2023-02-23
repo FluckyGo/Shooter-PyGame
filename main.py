@@ -4,7 +4,7 @@ import pygame
 pygame.init()
 
 screen_width, screen_height = 800, 600
-
+screen_fill_color = (32, 52, 71)
 screen = pygame.display.set_mode((screen_width, screen_height))
 
 pygame.display.set_caption("Awesome shooter game")
@@ -18,3 +18,8 @@ while True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             sys.exit()
+
+    screen.fill(screen_fill_color)
+    screen.blit(fighter_image,(fighter_x, fighter_y))
+
+    pygame.display.update()
